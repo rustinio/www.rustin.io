@@ -1,0 +1,19 @@
+!!! 5
+%html
+  %head
+    %meta{ content: 'IE=edge', http_equiv: 'X-UA-Compatible' }
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'width=device-width,initial-scale=1', name: 'viewport' }
+    %title= current_page.data.title || "Rustin - ChatOps for Rust."
+    %meta{ content: 'Rustin is a ChatOps framework for the Rust programming language.', name: 'description' }
+    %link{ rel: 'canonical', href: full_url_for(current_page.url) }
+    = stylesheet_link_tag :site
+  %body{ class: page_classes }
+
+    = yield
+
+    .container-fluid
+      %p.text-center
+        %small
+          The source code and content of this website are free and available under the MIT license:
+          = link_to 'www.rustin.io', 'https://github.com/rustinio/www.rustin.io'
